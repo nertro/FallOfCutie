@@ -12,4 +12,9 @@ public class IntroVid : MonoBehaviour {
 			Application.LoadLevel("start");
 		}
 	}
+
+	void ScaleTexture()
+	{
+
+	}
 }

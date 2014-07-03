@@ -32,12 +32,15 @@ public class WayPointManager : MonoBehaviour {
         {
             if (nodes[i] != lastNode)
             {
+
                 if (minDistNotSet)
                 {
                     minDist = Vector3.Distance(nodes[i].transform.position, targetPosition);
                     minDistNotSet = false;
                 }
+
                 newDist = Vector3.Distance(nodes[i].transform.position, targetPosition);
+
                 if (newDist <= minDist)
                 {
                     minDist = newDist;
@@ -52,7 +55,7 @@ public class WayPointManager : MonoBehaviour {
 
     public bool PlayerIsInRange(GameObject other)
     {
-        if (Vector3.Distance(player.transform.position, other.transform.position) < 8)
+        if (Vector3.Distance(player.transform.position, other.transform.position) <= 8)
         {
             return true;
         }
