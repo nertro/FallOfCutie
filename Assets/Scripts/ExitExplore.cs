@@ -3,10 +3,18 @@ using System.Collections;
 
 public class ExitExplore : MonoBehaviour {
 
-	void Update () {
-        if (Application.loadedLevelName == "explore" && Input.GetKeyDown(KeyCode.Escape))
+	void Update () 
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.LoadLevel("start");
+            if (Application.loadedLevelName == "explore")
+            {
+                Application.LoadLevel("start");
+            }
+            else if(Application.loadedLevelName == "game")
+            {
+                
+            }
         }
 	}
 }

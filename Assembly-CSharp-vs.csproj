@@ -139,6 +139,7 @@
      <Compile Include="Assets\Scripts\ExitTestLevels.cs" />
      <Compile Include="Assets\Scripts\Explore\BulletExplore.cs" />
      <Compile Include="Assets\Scripts\Explore\ChangeWeaponExplore.cs" />
+     <Compile Include="Assets\Scripts\Explore\DeactivateTeddySpawn.cs" />
      <Compile Include="Assets\Scripts\Explore\ShootExplore.cs" />
      <Compile Include="Assets\Scripts\GUI\GameGUI.cs" />
      <Compile Include="Assets\Scripts\GUI\HideMouse.cs" />

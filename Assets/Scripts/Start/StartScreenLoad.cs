@@ -12,6 +12,16 @@ public class StartScreenLoad : MonoBehaviour {
         }
         if (!this.GetComponent<AudioSource>().isPlaying && newLevel)
         {
+            if(newLevelName == "explore")
+            {
+                PlayerPrefs.SetInt("foc_isExploreModeOn", 1);
+                newLevelName = "game";
+            }
+            else if (newLevelName == "game")
+            {
+                PlayerPrefs.SetInt("foc_isExploreModeOn", 0);
+            }
+
             Application.LoadLevel(newLevelName);
         }
 	}
