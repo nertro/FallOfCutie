@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShowMouse : MonoBehaviour {
 
-	void Update () {
+	void Start () {
 		Screen.showCursor = true;
 	}
 }
