@@ -3,17 +3,27 @@ using System.Collections;
 
 public class ThrowAnimation : MonoBehaviour {
     Animator animator;
+    private bool animationStarted;
+    public bool Throwing { get; set; }
 
     void Start()
     {
         animator = this.gameObject.GetComponent<Animator>();
+        animationStarted = false;
+        Throwing = false;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && this.animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
         {
             animator.Play("vor");
+            animationStarted = true;
+        }
+        else if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("zuruck") && animationStarted)
+        {
+            Throwing = true;
+            animationStarted = false;
         }
     }
 }
