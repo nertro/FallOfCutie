@@ -55,13 +55,14 @@ public class ChangeWeapon : MonoBehaviour {
         currentWeapon = 0;
 
         otherArm.gameObject.SetActive(true);
-		if (otherArm.name == "ArmWurf_anim") 
+		if (otherArm.name == "Arm_Wurf_anim_NEU") 
 		{
 			bulletLabel.SetActive(false);
 			cross.SetActive(false);
 			bulletSprite.SetActive(false);
-			Debug.Log(hammer);
-			hammer.GetComponent<ThrowHammer>().Activated = true;
+			Debug.Log("Hammer arm activated");
+            otherArm.GetComponent<Animator>().Play("idle");
+            hammer.GetComponent<ThrowHammer>().Activate();
 			
 		}
 		else

@@ -5,12 +5,14 @@ public class ThrowAnimation : MonoBehaviour {
     Animator animator;
     private bool animationStarted;
     public bool Throwing { get; set; }
+    public bool Punching { get; set; }
 
     void Start()
     {
         animator = this.gameObject.GetComponent<Animator>();
         animationStarted = false;
         Throwing = false;
+
     }
 
     void Update()
@@ -19,6 +21,7 @@ public class ThrowAnimation : MonoBehaviour {
         {
             animator.Play("vor");
             animationStarted = true;
+            Punching = true;
         }
         else if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("zuruck") && animationStarted)
         {

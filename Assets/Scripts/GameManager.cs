@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour {
 	private bool spawningItems = false;
 	private WayPointManager wayPointManager;
 	private Vector3 hammerPosition;
-	private Vector3 hammerRotation;
+	private Quaternion hammerRotation;
 
-	public Vector3 HammerRotation {
+	public Quaternion HammerRotation {
 		get {
 			return hammerRotation;
 		}

@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 8d291d152a0519f41b2f807cc0d842a2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: jnt_arm1
+    100004: jnt_arm2
+    100006: jnt_arm3
+    100008: jnt_Hammer
+    100010: jnt_middle
+    100012: jnt_middle1
+    100014: jnt_middle2
+    100016: jnt_middle3
+    100018: jnt_pinky
+    100020: jnt_pinky1
+    100022: jnt_pinky2
+    100024: jnt_pinky3
+    100026: jnt_ring
+    100028: jnt_ring1
+    100030: jnt_ring2
+    100032: jnt_ring3
+    100034: jnt_thumb
+    100036: jnt_thumb1
+    100038: jnt_thumb2
+    100040: jnt_thumb3
+    100042: jnt_tip
+    100044: jnt_tip1
+    100046: jnt_tip2
+    100048: jnt_tip3
+    100050: linker_Arm2
+    400000: //RootNode
+    400002: jnt_arm1
+    400004: jnt_arm2
+    400006: jnt_arm3
+    400008: jnt_Hammer
+    400010: jnt_middle
+    400012: jnt_middle1
+    400014: jnt_middle2
+    400016: jnt_middle3
+    400018: jnt_pinky
+    400020: jnt_pinky1
+    400022: jnt_pinky2
+    400024: jnt_pinky3
+    400026: jnt_ring
+    400028: jnt_ring1
+    400030: jnt_ring2
+    400032: jnt_ring3
+    400034: jnt_thumb
+    400036: jnt_thumb1
+    400038: jnt_thumb2
+    400040: jnt_thumb3
+    400042: jnt_tip
+    400044: jnt_tip1
+    400046: jnt_tip2
+    400048: jnt_tip3
+    400050: linker_Arm2
+    4300000: linker_Arm2
+    7400000: Take 001
+    7400002: vor
+    7400004: zuruck
+    7400006: idle
+    9500000: //RootNode
+    13700000: linker_Arm2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jnt_arm1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_Hammer
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2/jnt_middle3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2/jnt_pinky3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2/jnt_ring3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2/jnt_thumb3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2/jnt_tip3
+        weight: 1
+      - path: linker_Arm2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: vor
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 22.3999996
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jnt_arm1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_Hammer
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2/jnt_middle3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2/jnt_pinky3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2/jnt_ring3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2/jnt_thumb3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2/jnt_tip3
+        weight: 1
+      - path: linker_Arm2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: zuruck
+      takeName: Take 001
+      firstFrame: 22.3999996
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jnt_arm1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_Hammer
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2/jnt_middle3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2/jnt_pinky3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2/jnt_ring3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2/jnt_thumb3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2/jnt_tip3
+        weight: 1
+      - path: linker_Arm2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1.10000002
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jnt_arm1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_Hammer
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_middle/jnt_middle1/jnt_middle2/jnt_middle3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_pinky/jnt_pinky1/jnt_pinky2/jnt_pinky3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_ring/jnt_ring1/jnt_ring2/jnt_ring3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_thumb/jnt_thumb1/jnt_thumb2/jnt_thumb3
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2
+        weight: 1
+      - path: jnt_arm1/jnt_arm2/jnt_arm3/jnt_tip/jnt_tip1/jnt_tip2/jnt_tip3
+        weight: 1
+      - path: linker_Arm2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -3,68 +3,64 @@ using System.Collections;
 
 public class ThrowHammer : MonoBehaviour
 {
-    public float speed = 50;
+    public float speed = 30;
     public GameObject throwArm;
 
     private GameObject hitmarker;
     private Animator animator;
-    private Quaternion startRotation;
-    private Vector3 startPosition;
     private bool thrown;
     private float timer = 0;
     private bool starting = true;
     private AudioSource[] audioSources;
     public GameObject dieSound;
     private GameManager gameManager;
-    public bool Activated { get; set; }
 
     void Start()
     {
         this.animator = throwArm.gameObject.GetComponent<Animator>();
         this.audioSources = GetComponents<AudioSource>();
-        if (starting)
-        {
-            starting = false;
-            this.startRotation = this.gameObject.transform.localRotation;
-            this.startPosition = this.gameObject.transform.localPosition;
-        }
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        starting = false;
+        gameManager.HammerRotation = this.transform.localRotation;
+        gameManager.HammerPosition = this.transform.localPosition;
         thrown = false;
-        Debug.Log("startHammer");
     }
 
     void Update()
     {
-        if (Activated) //Set hammer to StartPosition and Rotation, when chosen as weapon
+        if (!thrown && this.transform.localPosition != gameManager.HammerPosition) //if weapon changes to fast, the hammer will not be in the right position
         {
-            this.rigidbody.isKinematic = true;
-            this.gameObject.transform.localPosition = this.startPosition;
-            this.gameObject.transform.localRotation = this.startRotation;
-            this.Activated = false;
-            thrown = false;
-            timer = 0;
-            Debug.Log("activated");
+            this.gameObject.transform.localRotation = gameManager.HammerRotation;
+            this.gameObject.transform.localPosition = gameManager.HammerPosition;
         }
+
+        if (throwArm.GetComponent<ThrowAnimation>().Punching)
+        {
+            this.GetComponent<BoxCollider>().enabled = true;
+            this.throwArm.GetComponent<ThrowAnimation>().Punching = false;
+        }
+
         if (throwArm.GetComponent<ThrowAnimation>().Throwing) //Make sure Hammer is in Startposition and throw
         {
-            this.gameObject.transform.localPosition = this.startPosition;
-            this.gameObject.transform.localRotation = this.startRotation;
+            this.gameObject.transform.localPosition = gameManager.HammerPosition;
+            this.gameObject.transform.localRotation = gameManager.HammerRotation;
 
             this.rigidbody.isKinematic = false;
             this.rigidbody.AddForce(this.transform.forward * speed, ForceMode.Impulse);
             this.audioSources[0].Play();
-            this.GetComponent<BoxCollider>().enabled = true;
             throwArm.GetComponent<ThrowAnimation>().Throwing = false;
 
+            this.gameObject.layer = LayerMask.NameToLayer("CollisionDetection");
             timer = 0;
             thrown = true;
             Debug.Log("thrown");
         }
-        else if (thrown && Vector3.Distance(this.transform.localPosition, this.startPosition) < 3 && timer > 0.1f) //if hammer is near start Position and was in air(timer), reset hammer position
+        else if (thrown && Vector3.Distance(this.transform.localPosition, gameManager.HammerPosition) < 3 && timer > 0.2f) //if hammer is near start Position and was in air(timer), reset hammer position
         {
             this.rigidbody.isKinematic = true;
-            this.transform.localPosition = this.startPosition;
-            this.transform.localRotation = this.startRotation;
+            this.transform.localPosition = gameManager.HammerPosition;
+            this.transform.localRotation = gameManager.HammerRotation;
+            this.gameObject.layer = LayerMask.NameToLayer("Weapons");
             Debug.Log("back");
             thrown = false;
             timer = 0;
@@ -76,8 +72,9 @@ public class ThrowHammer : MonoBehaviour
         }
         if (timer > 3) //Reset Hammer if lost
         {
-            this.transform.localPosition = this.startPosition;
-            this.transform.localRotation = this.startRotation;
+            this.transform.localPosition = gameManager.HammerPosition;
+            this.transform.localRotation = gameManager.HammerRotation;
+            this.gameObject.layer = LayerMask.NameToLayer("Weapons");
             this.rigidbody.isKinematic = true;
             thrown = false;
             timer = 0;
@@ -98,5 +95,18 @@ public class ThrowHammer : MonoBehaviour
     void CountTimeInAir()
     {
         timer += Time.deltaTime;
+    }
+
+    public void Activate()
+    {
+        this.rigidbody.isKinematic = true;
+        this.gameObject.transform.localPosition = gameManager.HammerPosition;
+        this.gameObject.transform.localRotation = gameManager.HammerRotation;
+        this.gameObject.layer = LayerMask.NameToLayer("Weapons");
+        throwArm.GetComponent<ThrowAnimation>().Throwing = false;
+        thrown = false;
+        timer = 0;
+        Debug.Log("activated");
+        Debug.Log(gameManager.HammerPosition);
     }
 }
