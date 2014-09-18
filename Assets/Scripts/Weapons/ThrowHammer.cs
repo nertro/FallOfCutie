@@ -19,10 +19,7 @@ public class ThrowHammer : MonoBehaviour
     {
         this.animator = throwArm.gameObject.GetComponent<Animator>();
         this.audioSources = GetComponents<AudioSource>();
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         starting = false;
-        gameManager.HammerRotation = this.transform.localRotation;
-        gameManager.HammerPosition = this.transform.localPosition;
         thrown = false;
     }
 
@@ -88,7 +85,11 @@ public class ThrowHammer : MonoBehaviour
         {
             Instantiate(dieSound, this.transform.position, Quaternion.identity);
             gameManager.AddOneToScore();
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<TeddyHealthAndAttack>().health = 0;
+            other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            other.gameObject.rigidbody.isKinematic = true;
+            other.gameObject.GetComponent<Animator>().speed = 1.7f;
+            other.gameObject.GetComponent<Animator>().Play("dying");
         }
     }
 
@@ -100,13 +101,17 @@ public class ThrowHammer : MonoBehaviour
     public void Activate()
     {
         this.rigidbody.isKinematic = true;
+        if (gameManager == null)
+        {
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+            gameManager.HammerRotation = this.transform.localRotation;
+            gameManager.HammerPosition = this.transform.localPosition;
+        }
         this.gameObject.transform.localPosition = gameManager.HammerPosition;
         this.gameObject.transform.localRotation = gameManager.HammerRotation;
         this.gameObject.layer = LayerMask.NameToLayer("Weapons");
         throwArm.GetComponent<ThrowAnimation>().Throwing = false;
         thrown = false;
         timer = 0;
-        Debug.Log("activated");
-        Debug.Log(gameManager.HammerPosition);
     }
 }

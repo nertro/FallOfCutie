@@ -25,7 +25,7 @@ public class TeddyAmbusherNav : MonoBehaviour {
 
     void Update()
     {
-        if (navigate)
+        if (navigate && this.gameObject.GetComponent<TeddyHealthAndAttack>().health > 0)
         {
             if (start)
             {
@@ -34,6 +34,10 @@ public class TeddyAmbusherNav : MonoBehaviour {
                 start = false;
             }
             GetNewTarget();
+        }
+        if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Dead"))
+        {
+            Destroy(this.gameObject);
         }
 
     }

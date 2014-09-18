@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: 4b9e4dc0cfd956e428b51fcc58fc522e
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ctrl_Arm_L
+    100002: ctrl_Arm_R
+    100004: ctrl_chest
+    100006: ctrl_Head
+    100008: ctrl_Hip
+    100010: ctrl_Leg_L1
+    100012: ctrl_Leg_L_group
+    100014: ctrl_Leg_R
+    100016: ctrl_Leg_R_group
+    100018: ctrl_Main
+    100020: jnt_Arm_L
+    100022: jnt_Arm_L1
+    100024: jnt_Arm_R
+    100026: jnt_Arm_R1
+    100028: jnt_chest1
+    100030: jnt_Head1
+    100032: jnt_Leg_L
+    100034: jnt_Leg_L1
+    100036: jnt_Leg_L2
+    100038: jnt_Neck1
+    100040: jnt_Reg_R
+    100042: jnt_Reg_R1
+    100044: jnt_Reg_R2
+    100046: jnt_Spine
+    100048: jnt_Spine4
+    100050: Teddy_gelb
+    100052: //RootNode
+    400000: ctrl_Arm_L
+    400002: ctrl_Arm_R
+    400004: ctrl_chest
+    400006: ctrl_Head
+    400008: ctrl_Hip
+    400010: ctrl_Leg_L1
+    400012: ctrl_Leg_L_group
+    400014: ctrl_Leg_R
+    400016: ctrl_Leg_R_group
+    400018: ctrl_Main
+    400020: jnt_Arm_L
+    400022: jnt_Arm_L1
+    400024: jnt_Arm_R
+    400026: jnt_Arm_R1
+    400028: jnt_chest1
+    400030: jnt_Head1
+    400032: jnt_Leg_L
+    400034: jnt_Leg_L1
+    400036: jnt_Leg_L2
+    400038: jnt_Neck1
+    400040: jnt_Reg_R
+    400042: jnt_Reg_R1
+    400044: jnt_Reg_R2
+    400046: jnt_Spine
+    400048: jnt_Spine4
+    400050: Teddy_gelb
+    400052: //RootNode
+    4300000: Teddy_gelb
+    7400000: Walk
+    7400002: dying
+    7400004: Hit
+    9500000: //RootNode
+    13700000: Teddy_gelb
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ctrl_Main
+        weight: 1
+      - path: ctrl_Main/ctrl_Arm_L
+        weight: 1
+      - path: ctrl_Main/ctrl_Arm_R
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip/ctrl_chest
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip/ctrl_chest/ctrl_Head
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_L_group
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_L_group/ctrl_Leg_L1
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_R_group
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_R_group/ctrl_Leg_R
+        weight: 1
+      - path: jnt_Spine
+        weight: 1
+      - path: jnt_Spine/jnt_chest1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_L
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_L/jnt_Arm_L1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_R
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_R/jnt_Arm_R1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1/jnt_Head1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1/jnt_Head1/jnt_Spine4
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L/jnt_Leg_L1
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L/jnt_Leg_L1/jnt_Leg_L2
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R/jnt_Reg_R1
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R/jnt_Reg_R1/jnt_Reg_R2
+        weight: 1
+      - path: Teddy_gelb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dying
+      takeName: Take 001
+      firstFrame: 31
+      lastFrame: 66
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ctrl_Main
+        weight: 1
+      - path: ctrl_Main/ctrl_Arm_L
+        weight: 1
+      - path: ctrl_Main/ctrl_Arm_R
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip/ctrl_chest
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip/ctrl_chest/ctrl_Head
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_L_group
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_L_group/ctrl_Leg_L1
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_R_group
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_R_group/ctrl_Leg_R
+        weight: 1
+      - path: jnt_Spine
+        weight: 1
+      - path: jnt_Spine/jnt_chest1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_L
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_L/jnt_Arm_L1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_R
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_R/jnt_Arm_R1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1/jnt_Head1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1/jnt_Head1/jnt_Spine4
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L/jnt_Leg_L1
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L/jnt_Leg_L1/jnt_Leg_L2
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R/jnt_Reg_R1
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R/jnt_Reg_R1/jnt_Reg_R2
+        weight: 1
+      - path: Teddy_gelb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Hit
+      takeName: Take 001
+      firstFrame: 67
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ctrl_Main
+        weight: 1
+      - path: ctrl_Main/ctrl_Arm_L
+        weight: 1
+      - path: ctrl_Main/ctrl_Arm_R
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip/ctrl_chest
+        weight: 1
+      - path: ctrl_Main/ctrl_Hip/ctrl_chest/ctrl_Head
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_L_group
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_L_group/ctrl_Leg_L1
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_R_group
+        weight: 1
+      - path: ctrl_Main/ctrl_Leg_R_group/ctrl_Leg_R
+        weight: 1
+      - path: jnt_Spine
+        weight: 1
+      - path: jnt_Spine/jnt_chest1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_L
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_L/jnt_Arm_L1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_R
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Arm_R/jnt_Arm_R1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1/jnt_Head1
+        weight: 1
+      - path: jnt_Spine/jnt_chest1/jnt_Neck1/jnt_Head1/jnt_Spine4
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L/jnt_Leg_L1
+        weight: 1
+      - path: jnt_Spine/jnt_Leg_L/jnt_Leg_L1/jnt_Leg_L2
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R/jnt_Reg_R1
+        weight: 1
+      - path: jnt_Spine/jnt_Reg_R/jnt_Reg_R1/jnt_Reg_R2
+        weight: 1
+      - path: Teddy_gelb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

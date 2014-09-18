@@ -11,6 +11,7 @@ public class TeddyHealthAndAttack : MonoBehaviour {
     void Start()
     {
         this.navMeshAgent = this.GetComponent<NavMeshAgent>();
+        this.gameObject.GetComponent<Animator>().Play("Walk");
         audioSources = GetComponents<AudioSource>();
     }
 
@@ -57,5 +58,6 @@ public class TeddyHealthAndAttack : MonoBehaviour {
             GameObject.FindGameObjectWithTag("Counter").GetComponent<TeddyCount>().counter--;
         }
     }
+
 
 }

@@ -23,7 +23,14 @@ public class Bullet : MonoBehaviour {
             {
                 Instantiate(dieSound, this.transform.position, Quaternion.identity);
                 gameManager.AddOneToScore();
-                Destroy(other.gameObject);
+                other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+                other.gameObject.rigidbody.isKinematic = true;
+                other.gameObject.GetComponent<Animator>().speed = 1.7f;
+                other.gameObject.GetComponent<Animator>().Play("dying");
+            }
+            else
+            {
+                other.gameObject.GetComponent<Animator>().Play("Hit");
             }
         }
 
