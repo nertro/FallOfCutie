@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour {
     public void AddOneToScore()
     {
         score++;
+		Debug.Log ("ScoreAdded: ");
     }
 
 	public int GetScore()

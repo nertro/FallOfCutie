@@ -11,6 +11,10 @@ public class IntroVid : MonoBehaviour {
 		if (!movie.isPlaying) {
 			Application.LoadLevel("start");
 		}
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.LoadLevel("start");
+		}
 	}
 
 	void ScaleTexture()

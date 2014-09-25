@@ -84,12 +84,16 @@ public class ThrowHammer : MonoBehaviour
         if ((other.gameObject.tag == "Chaser" || other.gameObject.tag == "Ambusher" || other.gameObject.tag == "Basher") && thrown)
         {
             Instantiate(dieSound, this.transform.position, Quaternion.identity);
-            gameManager.AddOneToScore();
             other.gameObject.GetComponent<TeddyHealthAndAttack>().health = 0;
             other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
             other.gameObject.rigidbody.isKinematic = true;
             other.gameObject.GetComponent<Animator>().speed = 1.7f;
             other.gameObject.GetComponent<Animator>().Play("dying");
+			if (!other.gameObject.GetComponent<TeddyHealthAndAttack>().scoreAdded) 
+			{
+				gameManager.AddOneToScore();
+				other.gameObject.GetComponent<TeddyHealthAndAttack>().scoreAdded = true;
+			}
         }
     }
 

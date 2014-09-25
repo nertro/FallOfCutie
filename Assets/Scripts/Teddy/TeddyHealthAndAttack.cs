@@ -7,12 +7,14 @@ public class TeddyHealthAndAttack : MonoBehaviour {
     public int health = 100;
     private AudioSource[] audioSources;
     private NavMeshAgent navMeshAgent;
+	public bool scoreAdded;
 
     void Start()
     {
         this.navMeshAgent = this.GetComponent<NavMeshAgent>();
         this.gameObject.GetComponent<Animator>().Play("Walk");
         audioSources = GetComponents<AudioSource>();
+		scoreAdded = false;
     }
 
     void OnCollisionEnter(Collision other)
@@ -53,6 +55,7 @@ public class TeddyHealthAndAttack : MonoBehaviour {
 
     void OnDestroy()
     {
+		Debug.Log("destroy add score "+scoreAdded);
         if (GameObject.FindGameObjectWithTag("Counter").GetComponent<TeddyCount>().counter != null)
         {
             GameObject.FindGameObjectWithTag("Counter").GetComponent<TeddyCount>().counter--;
