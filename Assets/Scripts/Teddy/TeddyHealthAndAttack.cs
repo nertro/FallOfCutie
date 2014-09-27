@@ -8,6 +8,7 @@ public class TeddyHealthAndAttack : MonoBehaviour {
     private AudioSource[] audioSources;
     private NavMeshAgent navMeshAgent;
 	public bool scoreAdded;
+	public bool IsDying;
 
     void Start()
     {
@@ -55,7 +56,6 @@ public class TeddyHealthAndAttack : MonoBehaviour {
 
     void OnDestroy()
     {
-		Debug.Log("destroy add score "+scoreAdded);
         if (GameObject.FindGameObjectWithTag("Counter").GetComponent<TeddyCount>().counter != null)
         {
             GameObject.FindGameObjectWithTag("Counter").GetComponent<TeddyCount>().counter--;

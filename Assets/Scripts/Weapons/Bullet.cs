@@ -21,14 +21,15 @@ public class Bullet : MonoBehaviour {
 
             if (other.gameObject.GetComponent<TeddyHealthAndAttack>().health <= 0)
             {
-                Instantiate(dieSound, this.transform.position, Quaternion.identity);
-                other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
                 other.gameObject.rigidbody.isKinematic = true;
                 other.gameObject.GetComponent<Animator>().speed = 1.7f;
                 other.gameObject.GetComponent<Animator>().Play("dying");
 				if (!other.gameObject.GetComponent<TeddyHealthAndAttack>().scoreAdded) 
 				{
 					gameManager.AddOneToScore();
+					other.gameObject.GetComponent<TeddyHealthAndAttack>().IsDying = true;
+					other.gameObject.layer = LayerMask.NameToLayer("Weapons");
+					Instantiate(dieSound, this.transform.position, Quaternion.identity);
 					other.gameObject.GetComponent<TeddyHealthAndAttack>().scoreAdded = true;
 				}
             }

@@ -30,7 +30,12 @@ public class TeddyBasherNav : MonoBehaviour {
 
     void Update()
     {
-        if (navigate && this.gameObject.GetComponent<TeddyHealthAndAttack>().health > 0)
+		if (this.gameObject.GetComponent<TeddyHealthAndAttack>().IsDying) 
+		{
+			navigate = false;
+			this.navMeshAgent.SetDestination(this.transform.position);
+		}
+		else if (navigate && this.gameObject.GetComponent<TeddyHealthAndAttack>().health > 0)
         {
             if (start)
             {
