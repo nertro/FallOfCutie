@@ -5,6 +5,6 @@ public class HideMouse : MonoBehaviour {
 
 
 	void Update () {
-		Screen.showCursor = false;
+		Cursor.visible = false;
 	}
 }

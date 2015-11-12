@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour {
 
             if (other.gameObject.GetComponent<TeddyHealthAndAttack>().health <= 0)
             {
-                other.gameObject.rigidbody.isKinematic = true;
+                other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                 other.gameObject.GetComponent<Animator>().speed = 1.7f;
                 other.gameObject.GetComponent<Animator>().Play("dying");
 				if (!other.gameObject.GetComponent<TeddyHealthAndAttack>().scoreAdded) 

@@ -16,10 +16,10 @@ public class ShootExplore : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
 		{
-			GameObject.FindGameObjectWithTag("ShootArm").animation.Play();
+			GameObject.FindGameObjectWithTag("ShootArm").GetComponent<Animation>().Play();
 			GameObject newBullet = (GameObject)Instantiate(projectile, this.transform.position, Quaternion.LookRotation(player.transform.forward));
 			this.GetComponent<AudioSource>().Play();
-			newBullet.rigidbody.AddForce(this.transform.forward * speed, ForceMode.Impulse);
+			newBullet.GetComponent<Rigidbody>().AddForce(this.transform.forward * speed, ForceMode.Impulse);
 			shootParticles.Emit();
 		}
 	}	

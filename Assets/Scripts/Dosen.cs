@@ -13,8 +13,8 @@ public class Dosen : MonoBehaviour {
     {
         for (int i = 0; i < cans.Length; i++)
         {
-            cans[i].rigidbody.isKinematic = false;
-            cans[i].rigidbody.AddForce(Vector3.down * 0.005f);
+            cans[i].GetComponent<Rigidbody>().isKinematic = false;
+            cans[i].GetComponent<Rigidbody>().AddForce(Vector3.down * 0.005f);
         }
     }
 }

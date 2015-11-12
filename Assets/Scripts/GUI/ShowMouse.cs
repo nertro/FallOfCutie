@@ -4,6 +4,6 @@ using System.Collections;
 public class ShowMouse : MonoBehaviour {
 
 	void Start () {
-		Screen.showCursor = true;
+		Cursor.visible = true;
 	}
 }

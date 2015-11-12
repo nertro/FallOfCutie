@@ -42,8 +42,8 @@ public class ThrowHammer : MonoBehaviour
             this.gameObject.transform.localPosition = gameManager.HammerPosition;
             this.gameObject.transform.localRotation = gameManager.HammerRotation;
 
-            this.rigidbody.isKinematic = false;
-            this.rigidbody.AddForce(this.transform.forward * speed, ForceMode.Impulse);
+            this.GetComponent<Rigidbody>().isKinematic = false;
+            this.GetComponent<Rigidbody>().AddForce(this.transform.forward * speed, ForceMode.Impulse);
             this.audioSources[0].Play();
             throwArm.GetComponent<ThrowAnimation>().Throwing = false;
 
@@ -54,7 +54,7 @@ public class ThrowHammer : MonoBehaviour
         }
         else if (thrown && Vector3.Distance(this.transform.localPosition, gameManager.HammerPosition) < 3 && timer > 0.2f) //if hammer is near start Position and was in air(timer), reset hammer position
         {
-            this.rigidbody.isKinematic = true;
+            this.GetComponent<Rigidbody>().isKinematic = true;
             this.transform.localPosition = gameManager.HammerPosition;
             this.transform.localRotation = gameManager.HammerRotation;
             this.gameObject.layer = LayerMask.NameToLayer("Weapons");
@@ -72,7 +72,7 @@ public class ThrowHammer : MonoBehaviour
             this.transform.localPosition = gameManager.HammerPosition;
             this.transform.localRotation = gameManager.HammerRotation;
             this.gameObject.layer = LayerMask.NameToLayer("Weapons");
-            this.rigidbody.isKinematic = true;
+            this.GetComponent<Rigidbody>().isKinematic = true;
             thrown = false;
             timer = 0;
             Debug.Log("timer back");
@@ -84,7 +84,7 @@ public class ThrowHammer : MonoBehaviour
         if ((other.gameObject.tag == "Chaser" || other.gameObject.tag == "Ambusher" || other.gameObject.tag == "Basher") && thrown)
         {
             other.gameObject.GetComponent<TeddyHealthAndAttack>().health = 0;
-            other.gameObject.rigidbody.isKinematic = true;
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             other.gameObject.GetComponent<Animator>().speed = 1.7f;
             other.gameObject.GetComponent<Animator>().Play("dying");
 			if (!other.gameObject.GetComponent<TeddyHealthAndAttack>().scoreAdded) 
@@ -105,7 +105,7 @@ public class ThrowHammer : MonoBehaviour
 
     public void Activate()
     {
-        this.rigidbody.isKinematic = true;
+        this.GetComponent<Rigidbody>().isKinematic = true;
         if (gameManager == null)
         {
             gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
